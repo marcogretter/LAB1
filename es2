@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int numero,prodotto,risultato;
+    int i;
+    
+    printf("Inserisci un numero di cui vuoi sapere la tabellina:\n");
+    scanf("%d",&numero);
+    
+    printf("Quante volte vuoi moltiplicarlo?\n");
+    scanf("%d",&prodotto);
+    
+    for(i=1;i<=prodotto;i++){
+        risultato=numero*i;
+        printf("%d\t",risultato);
+    }
+    printf("\n");
+    return 0;
+}
