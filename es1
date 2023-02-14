@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char let1,let2,let3,temp;
+    
+    /*chiedo all'utente due lettere*/
+    printf("Inserisci due lettere:\n");
+    scanf("%c ",&let1);
+    scanf("%c",&let2);
+    
+    printf("Le lettere sono %c e %c\n",let1,let2);
+    
+    
+    if(let1<let2)
+        printf("%c viene prima di %c\n",let1,let2);
+        else
+            printf("%c viene prima di %c\n",let2,let1);
+    
+    if (let1>let2){
+        temp=let1;
+        let1=let2;
+        let2=temp;
+    }
+    let3=let1+1;
+    while (let3<let2) {
+        printf("%c\t",let3);
+        let3++;
+    }
+    printf("\n");
+    return 0;
+}
+    
