@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n=1,d=1,sumn=0,maxd=0,cont=0;
+    printf("i primi 20 numeri altamente composti sono:\n");
+    while(cont<20) {
+        while (d<n+1) {
+            if (n%d==0)
+                sumn++;
+            d++;
+        }
+        if (sumn>maxd){
+            printf("%d\t",n);
+            maxd=sumn;
+            cont++;
+        }
+        sumn=0;
+        d=1;
+        n++;
+    }
+    printf("\n");
+    return 0;
+}
