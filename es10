@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int NumeroDivisori(int num);
+
+int main() {
+    int num;
+    int numeri;
+    int cont=0;
+    int cont1;
+    cont1=0;
+    
+    while (cont<20) {
+        for (numeri=1; numeri<11000; numeri++) {
+            if(cont1<NumeroDivisori(numeri)){
+                printf("%d\t",numeri);
+                cont1=NumeroDivisori(numeri);
+                cont++;
+            }
+        }
+    }
+    return 0;
+}
+int NumeroDivisori(int num)
+{
+    int i;
+    int cont=0;
+    for (i=1; i<=num; i++) {
+        if(num%i==0)
+            cont++;
+    }
+    return cont;
+}
