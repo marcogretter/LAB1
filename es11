@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+    
+    int n,k;
+    
+    printf("Premi invio per iniziare a provare a indovinare:\n");
+    n=rand();
+    do {
+        printf("Digita un numero:\n");
+        scanf("%d",&k);
+        if(k>n)
+            printf("è più piccolo.\n");
+        if(k<n)
+            printf("è più grande.\n");
+    } while (k>n||k<n);
+    printf("Il numero corretto era proprio: %d!\n",n);
+}
