@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int a,b,c=0,d=0,e=0,f=0;
+    printf("inserisci lunghezza lato del quadrato\n");
+    scanf("%d",&a);
+    b=a;
+    while(c<a){
+        printf("*");
+        c++;
+    }
+    while(d<(a-1)){
+        printf("\n");
+        printf("*");
+        while(f<(b-1)){
+            printf(" ");
+            f++;
+        }
+        f=0;
+        printf("*");
+        d++;
+    }
+    printf("\n");
+    while(e<a){
+        printf("*");
+        e++;
+    }
+    printf("\n");
+    return 0;
+}
