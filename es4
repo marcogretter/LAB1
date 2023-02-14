@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int i,X;
+    int v[10];
+    long somma=0,prodotto=1;
+    
+    for(i=0;i<10;i++){
+        printf("Inserisci il numero %d di 10:\n",i+1);
+        scanf("%d",&v[i]);
+    }
+    printf("Inserisci il numero della casella dalla quale vuoi calcolare il prodotto e non più la somma:\n");
+    scanf("%d",&X);
+    
+    for (i=0; i<10; i++) {
+        printf("%d\t",v[i]);
+    }
+    printf("\n");
+    for(i=0;i<X;i++){
+        somma+=v[i];
+    }
+    for(i=X;i<10;i++){
+        prodotto=prodotto*v[i];
+    }
+    printf("La somma fino alla casella %d è: %ld.\n",X+1,somma);
+    printf("Il prodotto dalla casella %d è: %ld.\n",X+1,prodotto);
+    
+    
+    return 0;
+}
